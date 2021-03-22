@@ -118,4 +118,4 @@ Finally if you want ot upgrade vim-plug itself run the following
 ### Where did I learn all this?
 ---
 
-|  [Check out vim-plug on github](https://github.com/junegunn/vim-plug "https://github.com/junegunn/vim-plug")|  [Next Page](~/Documents/mdFiles/nvim/02plugin_install_with_vim_plug.md "~/Documents/mdFiles/nvim/02plugin_install_with_vim_plug.md")|
+|  [Check out vim-plug on github](https://github.com/junegunn/vim-plug "https://github.com/junegunn/vim-plug")|  [Next Page](https://github.com/abuzafarhaqq/linux-help/blob/main/nvim/03_neovim_setting_up_the_basics.md "https://github.com/abuzafarhaqq/linux-help/blob/main/nvim/03_neovim_setting_up_the_basics.md")|
