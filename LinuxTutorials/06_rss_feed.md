@@ -19,7 +19,6 @@ Termux: pkg install newsboat
 3. And now paste this urls into `urls`:
 
 ```
-
 https://www.linux.com/feed/ "~Linux.com | Open Source News"
 https://www.tecmint.com/feed/ "~Tech Mint"
 https://www.linuxfoundation.org/feed/ "~Linux Foundation"
@@ -75,5 +74,4 @@ https://www.youtube.com/feeds/videos.xml?user=BlackHatOfficialYT "~Black Hat"
 https://www.youtube.com/feeds/videos.xml?user=JtheLinuxguy "~The Linux Guy"
 https://www.youtube.com/feeds/videos.xml?user=TheRibalinux "~The riba Linux"
 https://www.youtube.com/feeds/videos.xml?user=travispbonfigli1969 "~Travispbonfigli"
-
 ```
