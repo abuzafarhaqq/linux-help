@@ -40,7 +40,8 @@ set expandtab								" Converts tabs to spaces
 set smartindent							" Makes indenting smart
 set autoindent							" Good auto indent
 set laststatus=0						" Always display the status line
-set number 									" Line numbers
+set relativenumber  "Relative Line Numbers
+set number    " relativenumber and number sets relativenumber line to non zero
 set cursorline							" Enable highlighting of the current line
 set background=dark					" tell vim waht the background color looks like
 set showtabline=2						" Always show tabs
@@ -63,9 +64,9 @@ Source to init.vim
 source $HOME/.config/nvim/general/settings.vim
 ```
 
-## Mapping new keys
-
 ---
+
+## Mapping new keys
 
 Again we'll create a directory called keys and a file called mappings.vim
 
@@ -74,20 +75,32 @@ mkdir ~/.config/nvim/keys
 touch ~/.config/nvim/keys/mappings.vim
 ```
 
-Add the following to mappings.vim
 
+Add the following to mappings.vim
 ```
 " Better nav for omnicomplete
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
 
-" Use alt + hjl to resize windows
-nnoremap <M-j>			:resize -2<CR>
-nnoremap <M-k>			:resize +2<CR>
-nnoremap <M-h>			:vertical resize -2<CR>
-nnoremap <M-l>			:vertical resize +2<CR>
+" -- File Mode [ SAVE, QUIT, SAVE+QUIT ]
+nnoremap <C-s> :w<CR>
+nnoremap <C-Q> :q!<CR>
+nnoremap <C-q> :wq!<CR>
 
-" I hate escape more than anything else
+" -- VIM Window Resize [ LEADER+jkhl ]
+nnoremap <leader>j :resize -2<CR>
+nnoremap <leader>k :resize +2<CR>
+nnoremap <leader>h :vertical resize -2<CR>
+nnoremap <leader>l :vertical resize +2<CR>
+
+" -- Vim Window Cursor Movement
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" -- ESC Key Mapping
+nnoremap <C-z> <Esc>
 inoremap jk <Esc>
 inoremap kj <Esc>
 
@@ -95,17 +108,15 @@ inoremap kj <Esc>
 inoremap <c-u> <ESC>viwUi
 nnoremap <c-u> viwU<Esc>
 
-" TAB in general mode will move to text buffer
-nnoremap <TAB> :bnext<CR>
-" SHIFT-TAB will go back
-nnoremap <S-TAB> :bprevious<CR>
+" -- Tabs Settings
+nnoremap <C-t> :tabnew<CR>
+nnoremap <TAB> :tabnext<CR>
+nnoremap <S-TAB> :tabprevious<CR>
 
-"Alternate way to save
-nnoremap <C-s> :w<CR>
-"Alternate way to quit
-nnoremap <C-Q> :wq!<CR>
-" Use control-c instead of escape
-nnoremap <C-c> <Esc>
+" -- Buffers Next / Previous
+" nnoremap <TAB> :bnext<CR>
+" nnoremap <S-TAB> :bprevious<CR>
+
 " <TAB>: completion
 inoremap <expr><TAB> pumvisible() ? "\C-n" : "\<TAB>"
 
@@ -120,6 +131,14 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da
+
+" -- Visual Block Movement - Move Entire Block Up/Down
+nnoremap <A-j> :m+<CR>==
+nnoremap <A-k> :m-2<CR>==
+inoremap <A-j> <Esc>:m+<CR>==gi
+inoremap <A-k> <Esc>:m-2<CR>==gi
+vnoremap <A-j> :m'>+<CR>gv=gv
+vnoremap <A-k> :m-2<CR>gv=gv
 
 ```
 
@@ -162,3 +181,6 @@ let g:node_host_prog = expand("~/.nvm/versions/node/v12.16.1/bin/node") " <- exa
 ```
 
 Run `cheackhealth` again and you should now see the requirements are met
+
+
+[Previous Page](/nvim/02_plugin_install_with_vim_plug.md "Vim Plug Install") | [Home Page](/README.md) | [Next Page](/nvim/04_neovim_themes.md "Neovim Theme Setup") |
