@@ -106,13 +106,13 @@ source $HOME/.config/nvim/vim-plug/plugins.vim
 ### Vim-plug commands
 
 If you done everything all right, then you should have already installed your vim-plug plugin manager.
-Open nvim using: `nvim`
-Check the status of your all neovim plugins: `:PlugStatus`
-Install all of your plugins: `:PlugInstall`
-To update your plugins: `:PlugUpdate`
-After the update you can press `d` to see the differences or run: `:PlugClean`
-To remove plugins that are no longer defined in the `plugins.vim` file:`:PlugClean`
-Finally if you want ot upgrade vim-plug itself run the following: `:PlugUpgrade`
+- Open nvim using: `nvim`
+- Check the status of your all neovim plugins: `:PlugStatus`
+- Install all of your plugins: `:PlugInstall`
+- To update your plugins: `:PlugUpdate`
+- After the update you can press `d` to see the differences or run: `:PlugClean`
+- To remove plugins that are no longer defined in the `plugins.vim` file:`:PlugClean`
+- Finally if you want ot upgrade vim-plug itself run the following: `:PlugUpgrade`
 
 ---
 
