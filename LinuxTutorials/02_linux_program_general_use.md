@@ -6,4 +6,8 @@
 
 `sudo apt install neofetch screenfetch`
 
+### In Manjaro(Or, arch based distro):
+
+`sudo pacman -S neofetch screenfetch`
+
 Neofetch / Screenfetch gives a short information about system. After install just type `neofetch` or `screenfetch`
